@@ -93,7 +93,8 @@ public class PandaHP : MonoBehaviour
 
         if (col.gameObject.tag == "specialCoin")
         {
-            AudioSource.PlayClipAtPoint(pickupSoundSpecial, this.transform.position);
+            AudioSource.PlayClipAtPoint(power, this.transform.position);
+            //AudioSource.PlayClipAtPoint(pickupSoundSpecial, this.transform.position);
             healthBar.value = 100;
 
             StartCoroutine(PowerUp());
@@ -104,10 +105,10 @@ public class PandaHP : MonoBehaviour
     {
         Powerup = true;
         Debug.Log("timer initiated");
-        AudioSource.PlayClipAtPoint(power, this.transform.position);
+
         yield return new WaitForSeconds(5);
         Debug.Log("timer complete");
-        AudioSource.DestroyImmediate(power, true);
+      
         Powerup = false;
 
     }
