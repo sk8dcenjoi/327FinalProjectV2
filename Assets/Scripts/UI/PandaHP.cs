@@ -12,7 +12,6 @@ public class PandaHP : MonoBehaviour
     public bool Powerup = false;
     public Text countText;
     public AudioClip death;
-    public AudioClip power;
     public AudioClip win;
     public AudioClip pickupSound;
     public AudioClip pickupSoundBad;
@@ -30,11 +29,10 @@ public class PandaHP : MonoBehaviour
     {
         if(healthBar.value == 0)
         {
-            countText.text = "Score: " + coinCount;
             Debug.Log("you should die here");
+            StartCoroutine(Loser());
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            StartCoroutine(Loser());
 
         }
     }
@@ -93,8 +91,7 @@ public class PandaHP : MonoBehaviour
 
         if (col.gameObject.tag == "specialCoin")
         {
-            AudioSource.PlayClipAtPoint(power, this.transform.position);
-            //AudioSource.PlayClipAtPoint(pickupSoundSpecial, this.transform.position);
+            AudioSource.PlayClipAtPoint(pickupSoundSpecial, this.transform.position);
             healthBar.value = 100;
 
             StartCoroutine(PowerUp());
@@ -117,7 +114,7 @@ public class PandaHP : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(win, this.transform.position);
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("GameWon");
     }
     private IEnumerator Loser()
     {

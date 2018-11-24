@@ -418,9 +418,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Did you win!
+  m_Text: 'You lost...
 
-    Game over...?'
+    Game over?'
 --- !u!222 &686884596
 CanvasRenderer:
   m_ObjectHideFlags: 0

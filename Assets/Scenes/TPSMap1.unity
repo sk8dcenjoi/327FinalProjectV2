@@ -6807,10 +6807,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d305b6fe2ff1544a918bf368f96401b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rocketPrefab: {fileID: 0}
-  Player: {fileID: 0}
-  rocketBarrel: {fileID: 0}
-  reloadTime: 0.5
 --- !u!136 &1028459221
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13617,7 +13613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cam: {fileID: 0}
-  WalkSpeed: 15
+  WalkSpeed: 30
   RotationsSpeed: 5
   sensitivityX: 5
 --- !u!114 &2003297527
@@ -13638,7 +13634,6 @@ MonoBehaviour:
   Powerup: 0
   countText: {fileID: 0}
   death: {fileID: 8300000, guid: b407b11420329cc4dbb66f8c7efd7682, type: 3}
-  power: {fileID: 8300000, guid: 1dce55d48eae682439dd248a38285cbd, type: 3}
   win: {fileID: 8300000, guid: 61cf6e42904414246a3b123634096219, type: 3}
   pickupSound: {fileID: 8300000, guid: 5d72ce448c8d06343a2b1221de8c403e, type: 3}
   pickupSoundBad: {fileID: 8300000, guid: 3b47688793dc5a24bb5b7376327af50d, type: 3}
